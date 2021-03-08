@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{0bd75871-1c17-4eaf-80ec-444e165fa11d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Engine">
+      <UniqueIdentifier>{fa704769-5439-45ec-afbd-bff5665d2307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Content">
+      <UniqueIdentifier>{c39a4e46-62c3-47ab-891b-06cc42647ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Engine\Systems">
+      <UniqueIdentifier>{7c2b1fb7-b7cc-4a00-8fd1-cb7ffa313b5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Engine\Systems\EntitySystem">
+      <UniqueIdentifier>{ee49b80b-ebbe-4ef9-aeca-2a66e6f91b36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Engine\Misc">
+      <UniqueIdentifier>{b7138ead-74d1-4655-a4a3-e556b5453f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Content\Level">
+      <UniqueIdentifier>{e4578120-e538-4eb5-9367-1b18d18a63f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Content\Entities">
+      <UniqueIdentifier>{c74cb5e8-6057-4564-a022-f0aa34b2c54b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameSystem.cpp">
+      <Filter>Game\Engine\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem.cpp">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="EntitySystem.h">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Game\Engine\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultLevel.cpp">
+      <Filter>Game\Content\Level</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Content\Entities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameSystem.h">
+      <Filter>Game\Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Game\Engine\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultLevel.h">
+      <Filter>Game\Content\Level</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game\Content\Entities</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
