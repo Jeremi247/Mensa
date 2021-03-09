@@ -4,13 +4,20 @@
 
 void Game::Initialize()
 {
-    m_systems.reserve( 1 );
-    m_systems.push_back( std::make_shared<EntitySystem>() );
+    InitializeGameSystems();
+}
+
+void Game::InitializeGameSystems()
+{
+    std::shared_ptr< Game > sharedThis = shared_from_this();
+
+    m_gameSystems.reserve( 1 );
+    m_gameSystems.push_back( std::make_shared<EntitySystem>( sharedThis ) );
 }
 
 void Game::Update()
 {
-    for ( std::shared_ptr< GameSystem >& system : m_systems )
+    for ( std::shared_ptr< GameSystem >& system : m_gameSystems )
     {
         system->Update();
     }
@@ -24,4 +31,18 @@ void Game::Draw( sf::RenderWindow& window )
     window.clear();
     window.draw(shape);
     window.display();
+}
+
+template<typename T>
+const std::shared_ptr< T >& Game::GetGameSystem()
+{
+    std::shared_ptr< T > foundSystem;
+    for( std::shared_ptr< GameSystem >& system : m_gameSystems )
+    {
+        foundSystem = dynamic_cast<T>(system);
+        if( foundSystem )
+        {
+            return foundSystem;
+        }
+    }
 }

@@ -8,7 +8,7 @@ void EntitySystem::Update()
 
 void EntitySystem::StartSpawnedEntities()
 {
-    int newCapacity = m_activeEntities.size() + m_spawnedEntities.size();
+    size_t newCapacity = m_activeEntities.size() + m_spawnedEntities.size();
     m_activeEntities.reserve( newCapacity );
 
     for (std::shared_ptr< Entity >& entity : m_spawnedEntities)

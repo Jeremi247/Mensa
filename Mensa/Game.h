@@ -1,7 +1,8 @@
 #pragma once
+#include <SFML/Graphics/RenderWindow.hpp>
 #include "GameSystem.h"
 
-class Game
+class Game : public std::enable_shared_from_this< Game >
 {
 public:
     void Initialize();
@@ -9,6 +10,12 @@ public:
     void Update();
     void Draw(sf::RenderWindow& window);
 
+    template<typename T>
+    const std::shared_ptr< T >& GetGameSystem();
+
 private:
-    std::vector<std::shared_ptr<GameSystem>> m_systems;
+    void InitializeGameSystems();
+
+    std::vector<std::shared_ptr<GameSystem>> m_gameSystems;
 };
+

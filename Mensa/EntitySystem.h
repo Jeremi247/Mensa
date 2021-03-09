@@ -1,4 +1,5 @@
 #pragma once
+#include "GlobalMacros.h"
 #include "GameSystem.h"
 #include "Entity.h"
 #include <vector>
@@ -6,8 +7,10 @@
 
 class EntitySystem : public GameSystem
 {
+    PARENT_TYPE( GameSystem );
+
 public:
-    virtual void Update();
+    virtual void Update() override;
 
 private:
     void StartSpawnedEntities();

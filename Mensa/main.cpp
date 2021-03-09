@@ -3,7 +3,7 @@
 
 int main()
 {
-    Game game;
+    std::shared_ptr< Game > game = std::make_shared< Game >();
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Mensa");
 
@@ -16,8 +16,8 @@ int main()
                 window.close();
         }
 
-        game.Update();
-        game.Draw( window );
+        game->Update();
+        game->Draw( window );
     }
 
     return 0;
