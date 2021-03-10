@@ -1,6 +1,11 @@
 #pragma once
 #include <memory>
 
+namespace sf
+{
+    class RenderWindow;
+}
+
 class Game;
 
 class GameSystem
@@ -8,7 +13,10 @@ class GameSystem
 public:
     GameSystem( const std::shared_ptr< Game >& gameInstance );
 
-    virtual void Update() = 0;
+    virtual void Update() {};
+    virtual void Draw( sf::RenderWindow& window ) {};
+
+    virtual ~GameSystem() {};
 
 protected:
     const std::shared_ptr< Game >& GetGame();

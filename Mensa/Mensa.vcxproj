@@ -153,24 +153,29 @@
   <ItemGroup>
     <ClCompile Include="DefaultLevel.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityComponent.cpp" />
     <ClCompile Include="EntitySystem.cpp" />
-    <ClCompile Include="EntitySystem.h" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameSystem.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RenderingSystem.cpp" />
+    <ClCompile Include="ShapeRenderer.cpp" />
     <ClCompile Include="SimpleTransform2D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DefaultLevel.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityComponent.h" />
+    <ClInclude Include="EntitySystem.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameSystem.h" />
     <ClInclude Include="GlobalMacros.h" />
     <ClInclude Include="Level.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RenderingSystem.h" />
+    <ClInclude Include="ShapeRenderer.h" />
     <ClInclude Include="SimpleTransform2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

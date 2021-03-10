@@ -7,6 +7,8 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode(1280, 720), "Mensa");
 
+    game->Initialize();
+
     while (window.isOpen())
     {
         sf::Event event;

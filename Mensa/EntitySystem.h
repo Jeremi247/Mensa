@@ -5,17 +5,30 @@
 #include <vector>
 #include <memory>
 
-class EntitySystem : public GameSystem
+namespace ent
 {
-    PARENT_TYPE( GameSystem );
+    class EntitySystem : public GameSystem
+    {
+        PARENT_TYPE( GameSystem );
 
-public:
-    virtual void Update() override;
+    public:
+        virtual void Update() override;
 
-private:
-    void StartSpawnedEntities();
-    void UpdateActiveEntities();
+        template<typename T, typename... Args>
+        std::shared_ptr< T > SpawnEntity( const Args&... args )
+        {
+            std::shared_ptr< T > spawnedEntity = std::make_shared< T >( GetGame(), args... );
+            spawnedEntity->Initialize();
+            m_spawnedEntities.push_back( spawnedEntity );
 
-    std::vector< std::shared_ptr< Entity > > m_spawnedEntities;
-    std::vector< std::shared_ptr< Entity > > m_activeEntities;
-};
+            return spawnedEntity;
+        }
+
+    private:
+        void StartSpawnedEntities();
+        void UpdateActiveEntities();
+
+        std::vector< std::shared_ptr< Entity > > m_spawnedEntities;
+        std::vector< std::shared_ptr< Entity > > m_activeEntities;
+    };
+}

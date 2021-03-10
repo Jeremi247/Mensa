@@ -33,12 +33,6 @@
     <ClCompile Include="GameSystem.cpp">
       <Filter>Game\Engine\Systems</Filter>
     </ClCompile>
-    <ClCompile Include="EntitySystem.cpp">
-      <Filter>Game\Engine\Systems\EntitySystem</Filter>
-    </ClCompile>
-    <ClCompile Include="EntitySystem.h">
-      <Filter>Game\Engine\Systems\EntitySystem</Filter>
-    </ClCompile>
     <ClCompile Include="Game.cpp">
       <Filter>Game\Engine</Filter>
     </ClCompile>
@@ -54,11 +48,23 @@
     <ClCompile Include="Player.cpp">
       <Filter>Game\Content\Entities</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleTransform2D.cpp">
+      <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Game\Engine\Systems\EntitySystem</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleTransform2D.cpp">
+    <ClCompile Include="EntitySystem.cpp">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeRenderer.cpp">
       <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityComponent.cpp">
+      <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderingSystem.cpp">
+      <Filter>Game\Engine\Systems</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -67,9 +73,6 @@
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Game\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Game\Engine\Systems\EntitySystem</Filter>
     </ClInclude>
     <ClInclude Include="Level.h">
       <Filter>Game\Engine\Misc</Filter>
@@ -83,11 +86,23 @@
     <ClInclude Include="GlobalMacros.h">
       <Filter>Game\Engine</Filter>
     </ClInclude>
-    <ClInclude Include="EntityComponent.h">
-      <Filter>Game\Engine\Systems\EntitySystem</Filter>
-    </ClInclude>
     <ClInclude Include="SimpleTransform2D.h">
       <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntitySystem.h">
+      <Filter>Game\Engine\Systems\EntitySystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityComponent.h">
+      <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="ShapeRenderer.h">
+      <Filter>Game\Engine\Systems\EntitySystem\EntityComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderingSystem.h">
+      <Filter>Game\Engine\Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

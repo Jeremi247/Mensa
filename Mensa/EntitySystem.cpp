@@ -1,29 +1,32 @@
 #include "EntitySystem.h"
 
-void EntitySystem::Update()
+namespace ent
 {
-    StartSpawnedEntities();
-    UpdateActiveEntities();
-}
-
-void EntitySystem::StartSpawnedEntities()
-{
-    size_t newCapacity = m_activeEntities.size() + m_spawnedEntities.size();
-    m_activeEntities.reserve( newCapacity );
-
-    for (std::shared_ptr< Entity >& entity : m_spawnedEntities)
+    void EntitySystem::Update()
     {
-        entity->Start();
-        m_activeEntities.push_back( entity );
+        StartSpawnedEntities();
+        UpdateActiveEntities();
     }
 
-    m_spawnedEntities.clear();
-}
-
-void EntitySystem::UpdateActiveEntities()
-{
-    for (std::shared_ptr< Entity >& entity : m_activeEntities)
+    void EntitySystem::StartSpawnedEntities()
     {
-        entity->Update();
+        size_t newCapacity = m_activeEntities.size() + m_spawnedEntities.size();
+        m_activeEntities.reserve( newCapacity );
+
+        for( std::shared_ptr< Entity >& entity : m_spawnedEntities )
+        {
+            entity->Start();
+            m_activeEntities.push_back( entity );
+        }
+
+        m_spawnedEntities.clear();
+    }
+
+    void EntitySystem::UpdateActiveEntities()
+    {
+        for( std::shared_ptr< Entity >& entity : m_activeEntities )
+        {
+            entity->Update();
+        }
     }
 }
